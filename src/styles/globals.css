@@ -1,0 +1,303 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ========================================
+   ESTILOS GLOBALES MOBILE-FIRST
+======================================== */
+
+:root {
+  --gradient-primary: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+  --gradient-secondary: linear-gradient(135deg, #8b5cf6 0%, #d946ef 100%);
+  --gradient-accent: linear-gradient(135deg, #06b6d4 0%, #3b82f6 100%);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-size: 16px;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: #ffffff;
+  background: #000000;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
+
+/* ========================================
+   COMPONENTES REUTILIZABLES MOBILE-FIRST
+======================================== */
+
+@layer components {
+  .glass-effect {
+    @apply backdrop-blur-md bg-white/10 border border-white/20;
+  }
+  
+  .gradient-text {
+    @apply bg-gradient-to-r from-yellow-400 via-orange-400 to-red-400 bg-clip-text text-transparent;
+  }
+  
+  .btn-primary {
+    @apply w-full bg-gradient-to-r from-yellow-500 to-orange-500 text-black font-bold py-4 px-6 rounded-2xl shadow-2xl hover:shadow-yellow-500/25 transform hover:-translate-y-1 transition-all duration-300 text-center;
+  }
+  
+  .btn-secondary {
+    @apply w-full bg-gray-800 border border-gray-600 text-white font-semibold py-4 px-6 rounded-2xl hover:border-gray-500 transition-all duration-300 text-center;
+  }
+  
+  .card-premium {
+    @apply bg-gray-900 rounded-3xl border border-gray-700 hover:border-yellow-500/50 transition-all duration-300;
+  }
+  
+  .section-padding {
+    @apply py-12 px-4;
+  }
+}
+
+/* ========================================
+   ANIMACIONES OPTIMIZADAS PARA MÓVIL
+======================================== */
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes glow {
+  0%, 100% { box-shadow: 0 0 20px rgba(249, 115, 22, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(249, 115, 22, 0.6); }
+}
+
+@keyframes pulse-slow {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+.glow-animation {
+  animation: glow 2s ease-in-out infinite;
+}
+
+.pulse-animation {
+  animation: pulse-slow 2s ease-in-out infinite;
+}
+
+.slide-in-up {
+  animation: slideInUp 0.6s ease-out;
+}
+
+/* ========================================
+   STRIPE BUTTON MOBILE OPTIMIZATION
+======================================== */
+
+stripe-buy-button {
+  --primary-color: #f59e0b;
+  --primary-color-hover: #d97706;
+  --border-radius: 16px;
+  --font-family: 'Inter', sans-serif;
+  --font-size: 16px;
+  --font-weight: 700;
+  --padding: 16px;
+  --width: 100%;
+  --height: 56px;
+}
+
+/* Ensure Stripe buttons are mobile-friendly */
+stripe-buy-button button {
+  width: 100% !important;
+  min-height: 56px !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  border-radius: 16px !important;
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%) !important;
+  color: #000000 !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+stripe-buy-button button:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: 0 8px 25px rgba(245, 158, 11, 0.3) !important;
+}
+
+/* ========================================
+   RESPONSIVE BREAKPOINTS MOBILE-FIRST
+======================================== */
+
+/* Mobile styles (default) */
+.hero-title {
+  font-size: 2.5rem;
+  line-height: 1.1;
+}
+
+/* Small mobile adjustments */
+@media (max-width: 360px) {
+  html {
+    font-size: 14px;
+  }
+  
+  .hero-title {
+    font-size: 2.25rem;
+  }
+  
+  .section-padding {
+    @apply py-10 px-3;
+  }
+}
+
+/* Tablet and up */
+@media (min-width: 640px) {
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  
+  .max-w-sm {
+    max-width: 32rem;
+  }
+}
+
+/* Desktop */
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 4rem;
+  }
+}
+
+/* ========================================
+   SCROLL BAR PERSONALIZADO
+======================================== */
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1f1f1f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #f59e0b 0%, #f97316 100%);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #d97706 0%, #ea580c 100%);
+}
+
+/* ========================================
+   OPTIMIZACIONES DE PERFORMANCE MÓVIL
+======================================== */
+
+/* Reduce motion for users with motion sensitivity */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Optimize text rendering on mobile */
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Prevent zoom on input focus (iOS) */
+input,
+select,
+textarea,
+button {
+  font-size: 16px;
+}
+
+/* Improve touch targets */
+button,
+a,
+[role="button"] {
+  min-height: 44px;
+  min-width: 44px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ========================================
+   DARK THEME OPTIMIZATIONS
+======================================== */
+
+/* Ensure proper contrast for accessibility */
+.text-gray-300 {
+  color: #d1d5db;
+}
+
+.text-gray-400 {
+  color: #9ca3af;
+}
+
+.text-gray-500 {
+  color: #6b7280;
+}
+
+/* Improve readability on dark backgrounds */
+.bg-gray-900 {
+  background-color: #0f0f0f;
+}
+
+.bg-gray-800 {
+  background-color: #1a1a1a;
+}
+
+/* ========================================
+   LOADING STATES AND TRANSITIONS
+======================================== */
+
+.loading-spinner {
+  @apply animate-spin rounded-full border-4 border-yellow-500 border-t-transparent;
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* ========================================
+   UTILITY CLASSES FOR MOBILE UX
+======================================== */
+
+.tap-highlight-none {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.no-scroll {
+  overflow: hidden;
+  position: fixed;
+  width: 100%;
+}
