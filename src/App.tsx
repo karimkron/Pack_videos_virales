@@ -1,7 +1,8 @@
 /* ========================================
    COMPONENTE PRINCIPAL DE LA APLICACIÓN
    Maneja las rutas y navegación entre páginas
-======================================== */
+   ======================================== */
+import './i18n'
 
 import { Routes, Route } from 'react-router-dom'
 import Hero from './components/Hero'

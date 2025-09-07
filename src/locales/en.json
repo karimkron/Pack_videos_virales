@@ -1,0 +1,312 @@
+{
+  "hero": {
+    "title_line1": "30,000",
+    "title_line2": "Premium Videos",
+    "title_line3": "Ready to publish",
+    "subtitle_line1": "{{luxury}} content for",
+    "subtitle_line2": "{{platforms}}",
+    "stats": {
+      "videos": "30K",
+      "videos_desc": "HD 4K Videos",
+      "price": "€18.95",
+      "price_desc": "Today only",
+      "downloads": "1,243",
+      "downloads_desc": "Downloads"
+    },
+    "cta_button": "VIEW PACKS",
+    "trust_indicators": {
+      "no_watermark": "No watermark",
+      "instant_access": "Instant access"
+    },
+    "urgency": {
+      "title": "LIMITED OFFER",
+      "desc": "Special price valid for 24h only"
+    }
+  },
+  "benefits": {
+    "title_line1": "What is the Mega Pack of",
+    "title_line2": "Viral Videos?",
+    "description": "+30,000 high-quality HD 4K videos with usage rights for TikTok, Instagram and Shorts. Without the costs or creation time. Customize them and Ready to publish from day one.",
+    "benefit1": {
+      "title": "Most Complete Pack",
+      "desc": "No other package offers this quantity and quality of exclusive content."
+    },
+    "benefit2": {
+      "title": "More Virality",
+      "desc": "Your posts generate traction with impactful and professional videos."
+    },
+    "benefit3": {
+      "title": "Save Time and Money",
+      "desc": "No need to create content from scratch. Monetize easily and gain authority."
+    },
+    "benefit4": {
+      "title": "Instant Access",
+      "desc": "Instant download on Google Drive. Start growing in 5 minutes."
+    },
+    "categories": {
+      "title": "Includes Categories",
+      "luxury": "Luxury & Style",
+      "luxury_desc": "millionaire lifestyle",
+      "personal": "Personal",
+      "personal_desc": "Development",
+      "business": "Business &",
+      "business_desc": "Entrepreneurship",
+      "motivation": "Motivation",
+      "motivation_desc": "& Success"
+    },
+    "urgency": {
+      "title": "LAST HOURS",
+      "special_price": "Special price: €18.95",
+      "normal_price": "Normal price: €97",
+      "savings": "Save €78 today only"
+    },
+    "cta_button": "GET ACCESS NOW",
+    "trust_badges": {
+      "secure_payment": "Secure payment",
+      "instant_download": "Instant download",
+      "guarantee": "7-day guarantee"
+    }
+  },
+  "pricing": {
+    "urgency_banner": "SPECIAL OFFER - 24h only",
+    "title_line1": "Choose your",
+    "title_line2": "Perfect Pack",
+    "subtitle": "One-time payment • No subscriptions • Lifetime access",
+    "complete_pack": {
+      "badge": "MOST POPULAR",
+      "title": "Complete Mega Pack",
+      "subtitle": "The most complete collection",
+      "price": "€18.95",
+      "original_price": "€97",
+      "discount": "-85%",
+      "videos_count": "30,000 premium videos",
+      "price_per_video": "Only €0.0005 per video",
+      "features": [
+        "30,000 HD 4K quality videos",
+        "complete premium categories",
+        "No watermarks - 100%",
+        "Professional music and effects",
+        "Formats: TikTok, IG, shorts and more",
+        "Unlimited downloads",
+        "Guaranteed lifetime access",
+        "Free updates"
+      ]
+    },
+    "basic_pack": {
+      "title": "Basic Pack",
+      "subtitle": "Perfect to get started",
+      "price": "€7.95",
+      "original_price": "€40",
+      "discount": "80.13%",
+      "videos_count": "7,000 premium videos",
+      "price_per_video": "Only €0.0011 per video",
+      "features": [
+        "7,000 HD 4K quality videos",
+        "premium categories",
+        "No watermarks",
+        "Music and effects included",
+        "Optimized for social media",
+        "Unlimited downloads"
+      ]
+    },
+    "comparison": {
+      "title": "Why the Mega Pack?",
+      "more_videos": "23K+",
+      "more_videos_desc": "More videos",
+      "extra_cost": "€11",
+      "extra_cost_desc": "Only €11 more",
+      "value": "4x",
+      "value_desc": "More value",
+      "conclusion": "4x more content for only €11 extra = Best investment"
+    },
+    "guarantee": {
+      "title": "Total Guarantee - No Risk",
+      "description": "If you're not 100% satisfied, we'll refund your money completely within the first 7 days. No questions asked.",
+      "secure_payment": "Secure payment",
+      "no_subscriptions": "No subscriptions",
+      "support": "24/7 Support"
+    },
+    "trust_badges": {
+      "secure_ssl": "Secure SSL payment",
+      "instant_access": "Instant access"
+    }
+  },
+  "testimonials": {
+    "title_line1": "Real",
+    "title_line2": "results",
+    "trust_indicators": {
+      "real_clients": "Real clients",
+      "verified_results": "Verified results"
+    }
+  },
+  "video_preview": {
+    "title_line1": "Content",
+    "title_line2": "preview"
+  },
+  "faq": {
+    "title_line1": "Frequently",
+    "title_line2": "Asked Questions",
+    "subtitle_line1": "Resolve your doubts",
+    "subtitle_line2": "All about the {{megaPack}}",
+    "subtitle_line3": "{{videosCount}}",
+    "questions": [
+      {
+        "q": "How do I receive access?",
+        "a": "After payment, you'll be redirected to a page with the direct Google Drive link. If you have problems, write to: megapack3k@gmail.com."
+      },
+      {
+        "q": "Are there really 30,000 videos?",
+        "a": "Yes, more than 30,000 videos in vertical HD/4K format, organized by content categories."
+      },
+      {
+        "q": "Can I monetize them?",
+        "a": "Absolutely. Includes commercial usage rights without restrictions."
+      },
+      {
+        "q": "Is this offer real?",
+        "a": "Yes, promotional price for the Complete Pack: €18.95 for a limited time. Normal price: €97. Basic Pack: €7.65."
+      },
+      {
+        "q": "Do the videos have watermarks?",
+        "a": "No, all videos are 100% free of watermarks. Ready to use without attributions."
+      },
+      {
+        "q": "What quality do the videos have?",
+        "a": "All in 4K and 1080p resolution, vertical 9:16 format, optimized for mobile and social networks."
+      },
+      {
+        "q": "Does it include updates?",
+        "a": "Yes, the Complete Pack includes free updates with new premium content."
+      },
+      {
+        "q": "Is there a money-back guarantee?",
+        "a": "100% satisfaction guarantee for 7 days. Full refund no questions asked."
+      }
+    ],
+    "support": {
+      "title": "Access problems?",
+      "email": "megapack3k@gmail.com",
+      "response_time": "Send your payment receipt - Response in 1h"
+    },
+    "final_cta": {
+      "button": "LAST CHANCE",
+      "trust_indicators": {
+        "videos_count": "30,000 HD 4K videos",
+        "price_today": "Only €18.95 today"
+      },
+      "urgency": {
+        "title": "LIMITED OFFER",
+        "desc": "Special price valid for 24h only"
+      }
+    }
+  },
+  "footer": {
+    "final_cta": {
+      "urgency": "LAST CHANCE",
+      "title_line1": "Don't miss this",
+      "title_line2": "unique offer",
+      "description": "30,000 premium videos for only €18.95. Tomorrow it returns to its normal price of €97",
+      "price": "€18.95",
+      "original_price": "€97",
+      "savings": "Save €78 today only",
+      "button": "GET MY ACCESS NOW",
+      "time_limit": "Offer valid for limited time only"
+    },
+    "brand": {
+      "name": "VideoPacks Premium",
+      "tagline": "Luxury content for creators",
+      "description": "The largest collection of premium videos to accelerate your growth on social media."
+    },
+    "stats": {
+      "videos": "30K+",
+      "videos_desc": "HD 4K Videos",
+      "clients": "800+",
+      "clients_desc": "Clients",
+      "support": "24/7",
+      "support_desc": "Support"
+    },
+    "guarantees": {
+      "secure_payment": "100% Secure Payment",
+      "secure_payment_desc": "Protected by Stripe",
+      "instant_support": "Instant Support",
+      "instant_support_desc": "Quick response",
+      "guarantee": "7-Day Guarantee",
+      "guarantee_desc": "100% satisfaction"
+    },
+    "copyright": "All rights reserved.",
+    "contact_support": "Contact Support",
+    "back_to_top": "Back to top"
+  },
+  "common": {
+    "luxury": "luxury",
+    "platforms": "Reels • Shorts • TikTok",
+    "mega_pack": "Mega Pack",
+    "videos_count": "30,000 Premium Videos"
+  },
+
+
+
+
+
+  "access": {
+  "loading": {
+    "checking": "Checking access..."
+  },
+  "denied": {
+    "title": "Restricted Access",
+    "description": "This area is exclusive for customers. You need to complete your purchase to access the premium videos.",
+    "button_home": "View Available Packs",
+    "already_bought": "Already purchased? Check your confirmation email."
+  },
+  "header": {
+    "brand": "VideoPacks Premium",
+    "area": "Client Area"
+  },
+  "success": {
+    "title": "Welcome to your",
+    "title_highlight": "premium content!",
+    "description": "Your payment was successfully processed. You can now access all the videos and boost your growth."
+  },
+  "card": {
+    "title": "Your MegaPack",
+    "button_drive": "Access Google Drive",
+    "button_fallback": "Button not working? Copy and paste this link:",
+    "copied": "Link copied!"
+  },
+  "recommendation": {
+    "title": "📱 Recommendation",
+    "subtitle": "For best experience",
+    "description": "We recommend downloading the Google Drive app for maximum download quality and a better mobile experience.",
+    "android": "🤖 Android",
+    "ios": "🍎 iOS"
+  },
+  "instructions": {
+    "title": "📂 Important Instructions",
+    "steps": [
+      {
+        "title": "Copy the folder",
+        "description": "Right-click the folder → \"Make a copy\" to save it to your personal Drive"
+      },
+      {
+        "title": "Avoid losing access",
+        "description": "Copying the folder to your Drive ensures permanent access even if the original link changes"
+      },
+      {
+        "title": "Batch download",
+        "description": "Select multiple videos → right-click → \"Download\" for bulk downloads"
+      },
+      {
+        "title": "Use and enjoy",
+        "description": "Upload to your social media and watch your engagement grow"
+      }
+    ]
+  },
+  "support": {
+    "title": "Need help? 🤝",
+    "description": "We’re here to help you 24/7 with any questions you have",
+    "contact": "📧 Contact Support",
+    "explore": "Explore more content"
+  }
+}
+
+}

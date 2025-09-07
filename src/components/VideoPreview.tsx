@@ -2,12 +2,14 @@
    VIDEO PREVIEW COMPONENT
    Modal con controles touch para móviles
 ======================================== */
+import { useTranslation } from 'react-i18next'
 
 import { useState, useRef, useEffect } from 'react'
 import { useNavigate, useLocation } from 'react-router-dom'
 import { X, ChevronLeft, ChevronRight, Volume2, VolumeX } from 'lucide-react'
 
 const VideoPreview = () => {
+  const { t } = useTranslation()
   const [isModalOpen, setIsModalOpen] = useState(false)
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0)
   const [showControls, setShowControls] = useState(true)
@@ -127,9 +129,9 @@ const VideoPreview = () => {
 
           {/* Título principal */}
           <h1 className="text-4xl font-black leading-tight">
-            <span className="block text-white">Vista previa</span>
+            <span className="block text-white">{t('video_preview.title_line1')}</span>
             <span className="block bg-gradient-to-r from-yellow-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-              de contenido
+             {t('video_preview.title_line2')}
             </span>
           </h1>
 

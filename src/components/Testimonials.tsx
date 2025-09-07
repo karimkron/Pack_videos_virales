@@ -2,8 +2,10 @@
    TESTIMONIALS COMPONENT
    Solo imágenes de capturas - Estilo Hero consistente
 ======================================== */
+import { useTranslation } from 'react-i18next'
 
 const Testimonials = () => {
+  const { t } = useTranslation()
   const testimonialImages = [
     './img/testimonio1.jpeg',
     './img/testimonio2.jpeg',
@@ -20,9 +22,9 @@ const Testimonials = () => {
 
           {/* Título principal */}
           <h1 className="text-4xl font-black leading-tight">
-            <span className="block text-white">Resultados</span>
+            <span className="block text-white">{t("testimonials.title_line1")}</span>
             <span className="block bg-gradient-to-r from-yellow-400 via-pink-400 to-cyan-400 bg-clip-text text-transparent">
-              reales
+              {t("testimonials.title_line2")}
             </span>
           </h1>
 
@@ -51,11 +53,11 @@ const Testimonials = () => {
           <div className="flex items-center justify-center gap-4 text-xs text-gray-400 pt-4">
             <div className="text-center">
               <div className="text-green-400 font-bold">✓</div>
-              <div>Clientes reales</div>
+              <div>{t("testimonials.trust_indicators.real_clients")}</div>
             </div>
             <div className="text-center">
               <div className="text-yellow-400 font-bold">✓</div>
-              <div>Resultados verificados</div>
+              <div>{t("testimonials.trust_indicators.verified_results")}</div>
             </div>
           </div>
         </div>

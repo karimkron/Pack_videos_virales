@@ -1,0 +1,314 @@
+{
+  "hero": {
+    "title_line1": "30.000",
+    "title_line2": "Vídeos Premium",
+    "title_line3": "Listos para publicar",
+    "subtitle_line1": "Contenido de {{luxury}} para",
+    "subtitle_line2": "{{platforms}}",
+    "stats": {
+      "videos": "30K",
+      "videos_desc": "Vídeos HD 4K",
+      "price": "€18.95",
+      "price_desc": "Solo hoy",
+      "downloads": "1.243",
+      "downloads_desc": "Descarga"
+    },
+    "cta_button": "VER PACKS",
+    "trust_indicators": {
+      "no_watermark": "Sin marca de agua",
+      "instant_access": "Acceso inmediato"
+    },
+    "urgency": {
+      "title": "OFERTA LIMITADA",
+      "desc": "Precio especial válido solo 24h"
+    }
+  },
+  "benefits": {
+    "title_line1": "¿Qué es el Mega Pack de",
+    "title_line2": "Vídeos Virales?",
+    "description": "+30,000 vídeos HD 4K de alta calidad con derechos de uso para TikTok, Instagram y Shorts. Sin los costos ni el tiempo de creación. Personalízalos y Listos para publicar desde el primer día.",
+    "benefit1": {
+      "title": "Pack Más Completo",
+      "desc": "Ningún otro paquete ofrece esta cantidad y calidad de contenido exclusivo."
+    },
+    "benefit2": {
+      "title": "Más Viralidad",
+      "desc": "Tus publicaciones generan tracción con videos impactantes y profesionales."
+    },
+    "benefit3": {
+      "title": "Ahorra Tiempo y Dinero",
+      "desc": "No necesitas crear contenido desde cero. Monetiza fácilmente y gana autoridad."
+    },
+    "benefit4": {
+      "title": "Acceso Inmediato",
+      "desc": "Descarga instantánea en Google Drive. Empieza a crecer en 5 minutos."
+    },
+    "categories": {
+      "title": "Incluye Categorías",
+      "luxury": "Lujo & Estilo",
+      "luxury_desc": "de vida millonario",
+      "personal": "Superación",
+      "personal_desc": "Personal",
+      "business": "Negocios &",
+      "business_desc": "Emprendimiento",
+      "motivation": "Motivación",
+      "motivation_desc": "& Éxito"
+    },
+    "urgency": {
+      "title": "ÚLTIMAS HORAS",
+      "special_price": "Precio especial: €18.95",
+      "normal_price": "Precio normal: €97",
+      "savings": "Ahorras €78 solo hoy"
+    },
+    "cta_button": "OBTENER ACCESO AHORA",
+    "trust_badges": {
+      "secure_payment": "Pago seguro",
+      "instant_download": "Descarga inmediata",
+      "guarantee": "Garantía 7 días"
+    }
+  },
+  "pricing": {
+    "urgency_banner": "OFERTA ESPECIAL - Solo 24h",
+    "title_line1": "Elige tu",
+    "title_line2": "Pack Perfecto",
+    "subtitle": "Pago único • Sin suscripciones • Acceso de por vida",
+    "complete_pack": {
+      "badge": "MÁS POPULAR",
+      "title": "Mega Pack Completo",
+      "subtitle": "La colección más completa",
+      "price": "€18,95",
+      "original_price": "€97",
+      "discount": "-85%",
+      "videos_count": "30.000 vídeos premium",
+      "price_per_video": "Solo €0,0005 por vídeo",
+      "features": [
+        "30.000 vídeos calidad HD 4K",
+        "categorías premium completas",
+        "Sin marcas de agua - 100%",
+        "Música y efectos profesionales",
+        "Formatos: TikTok, IG, shorts y más",
+        "Descargas ilimitadas",
+        "Acceso de por vida garantizado",
+        "Actualizaciones gratuitas"
+      ]
+    },
+    "basic_pack": {
+      "title": "Pack Básico",
+      "subtitle": "Perfecto para empezar",
+      "price": "€7,95",
+      "original_price": "€40",
+      "discount": "80,13%",
+      "videos_count": "7.000 vídeos premium",
+      "price_per_video": "Solo €0,0011 por vídeo",
+      "features": [
+        "7.000 vídeos calidad HD 4K",
+        "categorías premium",
+        "Sin marcas de agua",
+        "Música y efectos incluidos",
+        "Optimizado para redes",
+        "Descargas ilimitadas"
+      ]
+    },
+    "comparison": {
+      "title": "¿Por qué el Mega Pack?",
+      "more_videos": "23K+",
+      "more_videos_desc": "Más vídeos",
+      "extra_cost": "€11",
+      "extra_cost_desc": "Solo €11 más",
+      "value": "4x",
+      "value_desc": "Más valor",
+      "conclusion": "4x más contenido por solo €11 extra = Mejor inversión"
+    },
+    "guarantee": {
+      "title": "Garantía Total - Sin Riesgos",
+      "description": "Si no quedas 100% satisfecho, te devolvemos tu dinero completo durante los primeros 7 días. Sin preguntas.",
+      "secure_payment": "Pago seguro",
+      "no_subscriptions": "Sin suscripciones",
+      "support": "Soporte 24/7"
+    },
+    "trust_badges": {
+      "secure_ssl": "Pago seguro SSL",
+      "instant_access": "Acceso inmediato"
+    }
+  },
+  "testimonials": {
+    "title_line1": "Resultados",
+    "title_line2": "reales",
+    "trust_indicators": {
+      "real_clients": "Clientes reales",
+      "verified_results": "Resultados verificados"
+    }
+  },
+  "video_preview": {
+    "title_line1": "Vista previa",
+    "title_line2": "de contenido"
+  },
+  "faq": {
+    "title_line1": "Preguntas",
+    "title_line2": "Frecuentes",
+    "subtitle_line1": "Resuelve tus dudas",
+    "subtitle_line2": "Todo sobre el {{megaPack}}",
+    "subtitle_line3": "{{videosCount}}",
+    "questions": [
+      {
+        "q": "¿Cómo recibo el acceso?",
+        "a": "Tras el pago, serás redirigido a una página con el enlace directo a Google Drive. Si tienes problemas, escribe a: megapack3k@gmail.com."
+      },
+      {
+        "q": "¿Son realmente 30,000 videos?",
+        "a": "Sí, más de 30,000 videos en formato vertical HD/4K, organizados por categorías de contenido."
+      },
+      {
+        "q": "¿Puedo monetizarlos?",
+        "a": "Absolutamente. Incluye derechos de uso comercial sin restricciones."
+      },
+      {
+        "q": "¿Esta oferta es real?",
+        "a": "Sí, precio promocional del Pack Completo: €18,95 por tiempo limitado. Precio normal: €97. Pack Básico: €7,65."
+      },
+      {
+        "q": "¿Los videos tienen marca de agua?",
+        "a": "No, todos los videos son 100% libres de marcas de agua. Listos para usar sin atribuciones."
+      },
+      {
+        "q": "¿Qué calidad tienen los videos?",
+        "a": "Todos en resolución 4K y 1080p, formato vertical 9:16, optimizados para móviles y redes sociales."
+      },
+      {
+        "q": "¿Incluye actualizaciones?",
+        "a": "Sí, el Pack Completo incluye actualizaciones gratuitas con nuevo contenido premium."
+      },
+      {
+        "q": "¿Hay garantía de devolución?",
+        "a": "Garantía de satisfacción del 100% durante 7 días. Reembolso completo sin preguntas."
+      }
+    ],
+    "support": {
+      "title": "¿Problemas de acceso?",
+      "email": "megapack3k@gmail.com",
+      "response_time": "Envía tu comprobante de pago - Respuesta en 1h"
+    },
+    "final_cta": {
+      "button": "ÚLTIMA OPORTUNIDAD",
+      "trust_indicators": {
+        "videos_count": "30,000 videos HD 4K",
+        "price_today": "Solo €18,95 hoy"
+      },
+      "urgency": {
+        "title": "OFERTA LIMITADA",
+        "desc": "Precio especial válido solo 24h"
+      }
+    }
+  },
+  "footer": {
+    "final_cta": {
+      "urgency": "ÚLTIMA OPORTUNIDAD",
+      "title_line1": "No dejes pasar esta",
+      "title_line2": "oferta única",
+      "description": "30.000 vídeos premium por solo €18.95. Mañana vuelve a su precio normal de €97",
+      "price": "€18,95",
+      "original_price": "€97",
+      "savings": "Ahorras €78 solo hoy",
+      "button": "CONSEGUIR MI ACCESO AHORA",
+      "time_limit": "Oferta válida solo por tiempo limitado"
+    },
+    "brand": {
+      "name": "VideoPacks Premium",
+      "tagline": "Contenido de lujo para creadores",
+      "description": "La mayor colección de vídeos premium para acelerar tu crecimiento en redes sociales."
+    },
+    "stats": {
+      "videos": "30K+",
+      "videos_desc": "Vídeos HD 4K",
+      "clients": "800+",
+      "clients_desc": "Clientes",
+      "support": "24/7",
+      "support_desc": "Soporte"
+    },
+    "guarantees": {
+      "secure_payment": "Pago 100% Seguro",
+      "secure_payment_desc": "Protegido por Stripe",
+      "instant_support": "Soporte Inmediato",
+      "instant_support_desc": "Respuesta rapida",
+      "guarantee": "Garantía 7 Días",
+      "guarantee_desc": "100% satisfacción"
+    },
+    "copyright": "Todos los derechos reservados.",
+    "contact_support": "Contactar Soporte",
+    "back_to_top": "Volver arriba"
+  },
+  "common": {
+    "luxury": "lujo",
+    "platforms": "Reels • Shorts • TikTok",
+    "mega_pack": "Mega Pack",
+    "videos_count": "30,000 Videos Premium"
+  },
+
+
+
+
+
+  
+
+  "access": {
+  "loading": {
+    "checking": "Verificando acceso..."
+  },
+  "denied": {
+    "title": "Acceso Restringido",
+    "description": "Esta área es exclusiva para clientes. Necesitas completar tu compra para acceder a los vídeos premium.",
+    "button_home": "Ver Packs Disponibles",
+    "already_bought": "¿Ya compraste? Revisa tu email de confirmación."
+  },
+  "header": {
+    "brand": "VideoPacks Premium",
+    "area": "Área de cliente"
+  },
+  "success": {
+    "title": "¡Bienvenido a tu",
+    "title_highlight": "contenido premium!",
+    "description": "Tu pago se procesó correctamente. Ya puedes acceder a todos los vídeos y acelerar tu crecimiento."
+  },
+  "card": {
+    "title": "Tu MegaPack",
+    "button_drive": "Acceder a Google Drive",
+    "button_fallback": "¿El botón no funciona? Copia y pega este enlace:",
+    "copied": "¡Enlace copiado!"
+  },
+  "recommendation": {
+    "title": "📱 Recomendación",
+    "subtitle": "Para mejor experiencia",
+    "description": "Te recomendamos descargar la app de Google Drive para obtener la máxima calidad de descarga y mejor experiencia móvil.",
+    "android": "🤖 Android",
+    "ios": "🍎 iOS"
+  },
+  "instructions": {
+    "title": "📂 Instrucciones importantes",
+    "steps": [
+      {
+        "title": "Copia la carpeta",
+        "description": "Haz clic derecho en la carpeta → \"Hacer una copia\" para guardarla en tu Drive personal"
+      },
+      {
+        "title": "Evita perder acceso",
+        "description": "Al copiar la carpeta a tu Drive, tendrás acceso permanente aunque cambie el enlace original"
+      },
+      {
+        "title": "Descarga por lotes",
+        "description": "Selecciona varios videos → clic derecho → \"Descargar\" para descargas masivas"
+      },
+      {
+        "title": "Usa y disfruta",
+        "description": "Sube a tus redes sociales y observa cómo crece tu engagement"
+      }
+    ]
+  },
+  "support": {
+    "title": "¿Necesitas ayuda? 🤝",
+    "description": "Estamos aquí para ayudarte 24/7 con cualquier duda que tengas",
+    "contact": "📧 Contactar Soporte",
+    "explore": "Explorar más contenido"
+  }
+}
+
+}
