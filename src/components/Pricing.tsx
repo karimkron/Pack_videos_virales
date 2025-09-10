@@ -5,7 +5,7 @@
 
 import { Crown, Check, Star, Zap, AlertTriangle } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
 declare global {
   namespace JSX {
@@ -25,10 +25,12 @@ declare global {
 const Pricing = () => {
   const { t } = useTranslation()
   const stripePublishableKey = import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY
+  const pricingSectionRef = useRef<HTMLElement>(null)
   
   // Función para trackear inicio de compra en Facebook
   const trackInitiateCheckout = () => {
     if (typeof window !== 'undefined' && window.fbq) {
+      console.log('Enviando evento InitiateCheckout'); // Para debug
       window.fbq('track', 'InitiateCheckout', {
         value: 9.65,
         currency: 'EUR',
@@ -39,27 +41,76 @@ const Pricing = () => {
   }
 
   useEffect(() => {
-    // Escuchar clicks en los botones de Stripe
-    const handleStripeClick = (event: Event) => {
+    // Función para observar cambios en los botones de Stripe
+    const observeStripeButtons = () => {
+      const stripeButtons = document.querySelectorAll('stripe-buy-button');
+      
+      stripeButtons.forEach((button) => {
+        // Verificar si ya tiene el event listener
+        if (!button.hasAttribute('data-listener-added')) {
+          button.setAttribute('data-listener-added', 'true');
+          
+          // Agregar listener para click
+          button.addEventListener('click', () => {
+            console.log('Click en botón de Stripe detectado'); // Para debug
+            trackInitiateCheckout();
+          });
+          
+          // También escuchar en elementos internos del botón
+          const observer = new MutationObserver(() => {
+            const internalElements = button.shadowRoot?.querySelectorAll('*') || button.querySelectorAll('*');
+            internalElements.forEach((element) => {
+              element.addEventListener('click', () => {
+                console.log('Click en elemento interno detectado'); // Para debug
+                trackInitiateCheckout();
+              });
+            });
+          });
+          
+          observer.observe(button, { childList: true, subtree: true });
+        }
+      });
+    };
+
+    // Observer para detectar cuando se cargan los botones de Stripe
+    const buttonObserver = new MutationObserver(() => {
+      observeStripeButtons();
+    });
+
+    // Iniciar observación
+    if (pricingSectionRef.current) {
+      buttonObserver.observe(pricingSectionRef.current, { 
+        childList: true, 
+        subtree: true 
+      });
+    }
+
+    // También ejecutar inmediatamente por si ya están cargados
+    setTimeout(observeStripeButtons, 1000);
+    setTimeout(observeStripeButtons, 3000);
+    setTimeout(observeStripeButtons, 5000);
+
+    // Event listener adicional para cualquier click en la sección
+    const handleSectionClick = (event: Event) => {
       const target = event.target as HTMLElement;
       const stripeButton = target.closest('stripe-buy-button');
       
       if (stripeButton) {
-        // Trackear inicio de checkout independientemente del pack
+        console.log('Click general en botón Stripe'); // Para debug
         trackInitiateCheckout();
       }
     };
 
-    // Agregar event listeners
-    document.addEventListener('click', handleStripeClick);
+    document.addEventListener('click', handleSectionClick, true);
     
     return () => {
-      document.removeEventListener('click', handleStripeClick);
+      buttonObserver.disconnect();
+      document.removeEventListener('click', handleSectionClick, true);
     };
   }, []);
   
   return (
-    <section id="pricing" className="bg-black text-white py-12">
+    <section id="pricing" className="bg-black text-white py-12" ref={pricingSectionRef}>
       <div className="max-w-sm mx-auto px-4">
         
         {/* ========================================
@@ -135,12 +186,17 @@ const Pricing = () => {
               ))}
             </div>
 
-            {/* Stripe Button - Pack Completo */}
+            {/* Wrapper con evento manual para Pack Completo */}
             <div className="space-y-3">
-              <stripe-buy-button
-                buy-button-id={import.meta.env.VITE_STRIPE_BUY_BUTTON_ID_COMPLETE}
-                publishable-key={stripePublishableKey}>
-              </stripe-buy-button>
+              <div 
+                onClick={trackInitiateCheckout}
+                className="cursor-pointer"
+              >
+                <stripe-buy-button
+                  buy-button-id={import.meta.env.VITE_STRIPE_BUY_BUTTON_ID_COMPLETE}
+                  publishable-key={stripePublishableKey}>
+                </stripe-buy-button>
+              </div>
               
               <div className="flex items-center justify-center gap-4 text-xs text-gray-400">
                 <div className="flex items-center gap-1">
@@ -196,12 +252,17 @@ const Pricing = () => {
             ))}
           </div>
 
-          {/* Stripe Button - Pack BÃ¡sico */}
+          {/* Wrapper con evento manual para Pack Básico */}
           <div className="space-y-3">
-            <stripe-buy-button
-              buy-button-id={import.meta.env.VITE_STRIPE_BUY_BUTTON_ID_BASIC}
-              publishable-key={stripePublishableKey}>
-            </stripe-buy-button>
+            <div 
+              onClick={trackInitiateCheckout}
+              className="cursor-pointer"
+            >
+              <stripe-buy-button
+                buy-button-id={import.meta.env.VITE_STRIPE_BUY_BUTTON_ID_BASIC}
+                publishable-key={stripePublishableKey}>
+              </stripe-buy-button>
+            </div>
             
             <div className="flex items-center justify-center gap-4 text-xs text-gray-400">
               <div className="flex items-center gap-1">
