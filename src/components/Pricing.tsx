@@ -1,10 +1,11 @@
 /* ========================================
    PRICING SECTION MOBILE-FIRST OPTIMIZADA
-   Diseño inspirado en las imágenes con mejor UX
+   DiseÃ±o inspirado en las imÃ¡genes con mejor UX
 ======================================== */
 
 import { Crown, Check, Star, Zap, AlertTriangle } from 'lucide-react'
 import { useTranslation } from 'react-i18next'
+import { useEffect } from 'react'
 
 declare global {
   namespace JSX {
@@ -15,11 +16,47 @@ declare global {
       };
     }
   }
+  
+  interface Window {
+    fbq: (action: string, event: string, data?: any) => void;
+  }
 }
 
 const Pricing = () => {
   const { t } = useTranslation()
   const stripePublishableKey = import.meta.env.VITE_STRIPE_PUBLISHABLE_KEY
+  
+  // Función para trackear inicio de compra en Facebook
+  const trackInitiateCheckout = () => {
+    if (typeof window !== 'undefined' && window.fbq) {
+      window.fbq('track', 'InitiateCheckout', {
+        value: 9.65,
+        currency: 'EUR',
+        content_name: 'Video Pack Checkout Started',
+        content_type: 'product'
+      });
+    }
+  }
+
+  useEffect(() => {
+    // Escuchar clicks en los botones de Stripe
+    const handleStripeClick = (event: Event) => {
+      const target = event.target as HTMLElement;
+      const stripeButton = target.closest('stripe-buy-button');
+      
+      if (stripeButton) {
+        // Trackear inicio de checkout independientemente del pack
+        trackInitiateCheckout();
+      }
+    };
+
+    // Agregar event listeners
+    document.addEventListener('click', handleStripeClick);
+    
+    return () => {
+      document.removeEventListener('click', handleStripeClick);
+    };
+  }, []);
   
   return (
     <section id="pricing" className="bg-black text-white py-12">
@@ -53,7 +90,7 @@ const Pricing = () => {
           {/* Badge Best Seller */}
           <div className="absolute -top-3 left-1/2 transform -translate-x-1/2 z-10">
             <div className="bg-gradient-to-r from-yellow-500 to-orange-500 text-black px-4 py-1 rounded-full font-bold text-xs shadow-lg">
-              ⭐ {t('pricing.complete_pack.badge')}
+              â­ {t('pricing.complete_pack.badge')}
             </div>
           </div>
           
@@ -120,7 +157,7 @@ const Pricing = () => {
         </div>
 
         {/* ========================================
-             PACK BÁSICO (OPCIÓN ACCESIBLE)
+             PACK BÃSICO (OPCIÃ"N ACCESIBLE)
         ======================================== */}
         <div className="bg-gray-900 border border-gray-700 rounded-3xl p-6 mb-6">
           <div className="text-center mb-6">
@@ -147,7 +184,7 @@ const Pricing = () => {
             </div>
           </div>
 
-          {/* Features básicas */}
+          {/* Features bÃ¡sicas */}
           <div className="space-y-3 mb-6">
             {(t('pricing.basic_pack.features', { returnObjects: true }) as string[]).map((feature, idx) => (
               <div key={idx} className="flex items-center gap-3 text-sm">
@@ -159,7 +196,7 @@ const Pricing = () => {
             ))}
           </div>
 
-          {/* Stripe Button - Pack Básico */}
+          {/* Stripe Button - Pack BÃ¡sico */}
           <div className="space-y-3">
             <stripe-buy-button
               buy-button-id={import.meta.env.VITE_STRIPE_BUY_BUTTON_ID_BASIC}
@@ -180,11 +217,11 @@ const Pricing = () => {
         </div>
 
         {/* ========================================
-             COMPARACIÓN Y URGENCIA FINAL
+             COMPARACIÃ"N Y URGENCIA FINAL
         ======================================== */}
         <div className="bg-gradient-to-r from-green-900/30 to-blue-900/30 rounded-2xl p-6 border border-green-500/30 mb-6">
           <h3 className="text-lg font-bold text-white mb-4 text-center">
-            💎 {t('pricing.comparison.title')}
+            ðŸ'Ž {t('pricing.comparison.title')}
           </h3>
           
           <div className="grid grid-cols-3 gap-4 text-center mb-4">
@@ -203,31 +240,31 @@ const Pricing = () => {
           </div>
           
           <div className="text-center text-sm text-green-400 font-semibold">
-            🔥 {t('pricing.comparison.conclusion')}
+            ðŸ"¥ {t('pricing.comparison.conclusion')}
           </div>
         </div>
 
         {/* ========================================
-             GARANTÍA Y CONFIANZA
+             GARANTÃA Y CONFIANZA
         ======================================== */}
         <div className="bg-gray-800 rounded-2xl p-6 border border-gray-600 text-center">
           <h3 className="text-lg font-bold text-white mb-3">
-            🛡️ {t('pricing.guarantee.title')}
+            ðŸ›¡ï¸ {t('pricing.guarantee.title')}
           </h3>
           <p className="text-gray-300 text-sm mb-4">
             {t('pricing.guarantee.description')}
           </p>
           <div className="flex items-center justify-center gap-6 text-xs text-gray-400">
             <div className="text-center">
-              <div className="text-green-400 font-bold">✓</div>
+              <div className="text-green-400 font-bold">âœ"</div>
               <div>{t('pricing.guarantee.secure_payment')}</div>
             </div>
             <div className="text-center">
-              <div className="text-blue-400 font-bold">✓</div>
+              <div className="text-blue-400 font-bold">âœ"</div>
               <div>{t('pricing.guarantee.no_subscriptions')}</div>
             </div>
             <div className="text-center">
-              <div className="text-yellow-400 font-bold">✓</div>
+              <div className="text-yellow-400 font-bold">âœ"</div>
               <div>{t('pricing.guarantee.support')}</div>
             </div>
           </div>
