@@ -9,12 +9,6 @@ import { Crown, Download, CheckCircle, ExternalLink, ArrowLeft, Shield, Copy, Sm
 import { useTranslation } from 'react-i18next'
 import LanguageSelector from '../components/LanguageSelector'
 
-declare global {
-  interface Window {
-    fbq: (action: string, event: string, data?: any) => void;
-  }
-}
-
 interface Step {
   title: string
   description: string
@@ -37,27 +31,6 @@ const Access = () => {
       
       if (sessionId || success === 'true') {
         setHasValidAccess(true)
-        
-        // EVENTO ÚNICO DE COMPRA - Solo se envía una vez con valor fijo de €9.65
-        if (typeof window !== 'undefined' && window.fbq) {
-          // Verificar que no hayamos enviado ya este evento para evitar duplicados
-          const eventSent = sessionStorage.getItem(`purchase_tracked_${sessionId}`);
-          
-          if (!eventSent) {
-            window.fbq('track', 'Purchase', {
-              value: 9.65,
-              currency: 'EUR',
-              content_name: 'Video Pack Purchase',
-              content_type: 'product'
-            });
-            
-            // Marcar que ya enviamos el evento para esta sesión
-            if (sessionId) {
-              sessionStorage.setItem(`purchase_tracked_${sessionId}`, 'true');
-            }
-          }
-        }
-        
       } else {
         const accessToken = localStorage.getItem('videopack_access')
         if (accessToken) {
